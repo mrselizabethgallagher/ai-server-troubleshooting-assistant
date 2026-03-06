@@ -1,3 +1,7 @@
+## Project Status
+
+Work in Progress -- currently building core diagnostics and AI analysis modules
+
 # AI Server Troubleshooting Assistant
 
 A Python-based system administration tool that automates Linux server health checks, parses authentication logs, checks service status, and uses AI to generate troubleshooting recommendations.
@@ -56,3 +60,5 @@ Future versions will allow the assistant to run continuously like a lightweight 
 
 Example usage:
  
+bash
+python app.py --monitor
