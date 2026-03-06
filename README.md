@@ -10,13 +10,22 @@ The goal is to automate common diagnostic tasks and help administrators quickly 
 
 ## Features
 
-- Collects CPU, memory, and disk metrics
-- Displays top running processes
-- Identifies listening network ports
-- Parses authentication logs for failed SSH login attempts
-- Checks service status
-- Generates a formatted server health report
-- Uses AI to analyze system conditions and recommend actions
+## Core Features
+
+- Automated Linux server health checks
+- CPU, memory, and disk utilization monitoring
+- Top process identification
+- Listening port detection
+- Authentication log parsing for failed SSH attempts
+- Service status checks
+- AI-powered troubleshooting recommendations
+
+## Advanced Features
+
+- Automated **system risk scoring**
+- Alert detection for abnormal system conditions
+- AI-generated troubleshooting guidance
+- Designed for **continuous monitoring mode**
 
 ## Technologies Used
 
@@ -40,3 +49,10 @@ It is designed to be useful for both learning and practical homelab environments
 - scheduled monitoring
 - firewall integration
 - additional log analysis
+
+ ## Planned Monitoring Mode
+
+Future versions will allow the assistant to run continuously like a lightweight monitoring tool.
+
+Example usage:
+ 
