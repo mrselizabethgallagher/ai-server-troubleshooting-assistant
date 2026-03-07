@@ -1,22 +1,22 @@
-def calculate_risk(cpu, memory, disk, failed_logins):
+def calculate_risk(cpu_percent, memory_percent, disk_percent, failed_logins):
 
     score = 0
     alerts = []
 
-    if cpu > 90:
+    if cpu_percent > 90:
         score += 3
-        alerts.append("CPU usage above 90%")
+        alerts.append("High CPU usage")
 
-    if memory > 90:
+    if memory_percent > 90:
         score += 2
-        alerts.append("Memory usage above 90%")
+        alerts.append("High memory usage")
 
-    if disk > 90:
+    if disk_percent > 90:
         score += 3
         alerts.append("Disk usage above 90%")
 
-    if failed_logins > 20:
+    if failed_logins > 10:
         score += 2
-        alerts.append("High number of failed SSH login attempts")
+        alerts.append("Multiple failed SSH login attempts detected")
 
     return score, alerts
