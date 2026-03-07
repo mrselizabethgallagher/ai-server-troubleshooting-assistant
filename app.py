@@ -18,14 +18,17 @@ def main():
     print("=== SYSTEM INFO ===")
     print(get_system_info())
 
-    print("\n=== CPU INFO ===")
-    print(get_cpu_info())
+   print("\n=== CPU INFO ===")
+   cpu_info = get_cpu_info()
+   print(cpu_info)
 
-    print("\n=== MEMORY INFO ===")
-    print(get_memory_info())
+   print("\n=== MEMORY INFO ===")
+   memory_info = get_memory_info()
+   print(memory_info)
 
-    print("\n=== DISK INFO ===")
-    print(get_disk_info())
+   print("\n=== DISK INFO ===")
+   disk_info = get_disk_info()
+   print(disk_info)
 
     print("\n=== TOP PROCESSES ===")
     for proc in get_top_processes():
