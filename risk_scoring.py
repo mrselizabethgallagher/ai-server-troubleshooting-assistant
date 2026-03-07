@@ -1,5 +1,4 @@
 
-from risk_scoring import calculate_risk
 
 
 
