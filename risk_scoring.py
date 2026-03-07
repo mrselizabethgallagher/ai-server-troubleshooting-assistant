@@ -1,3 +1,8 @@
+
+from risk_scoring import calculate_risk
+
+
+
 def calculate_risk(cpu_percent, memory_percent, disk_percent, failed_logins):
 
     score = 0
