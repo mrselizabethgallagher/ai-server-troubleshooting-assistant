@@ -10,6 +10,7 @@ from collector import (
 )
 from log_parser import parse_failed_ssh_attempts
 from risk_scoring import calculate_risk
+from ai_analyzer import analyze_system
 
 
 def main():
@@ -73,6 +74,17 @@ def main():
             print(f"- {alert}")
     else:
         print("No critical issues detected.")
+
+    print("\n===AI SYSTEM ANALYSIS ===")
+
+    analysis = analyze_system(
+        cpu_info["cpu_percent"],
+        memory_info["memory_percent"],
+        disk_info["disk_percent"],
+        ssh_results["failed_count"]
+    )
+
+    print(analysis)
 
 
 if __name__ == "__main__":
