@@ -1,4 +1,5 @@
 
+
 from collector import (
     get_system_info,
     get_cpu_info,
@@ -10,7 +11,7 @@ from collector import (
 )
 
 from log_parser import parse_failed_ssh_attempts
-
+from risk_scoring import calculate_risk
 
 def main():
 
@@ -55,6 +56,24 @@ def main():
                 print(f"{ip}: {count}")
         else:
             print("None detected.")
+
+print("\n=== SYSTEM RISK SCORE ===")
+
+score, alerts = calculate_risk(
+    cpu_info["cpu_percent"],
+    memory_info["memory_percent"],
+    disk_info["disk_percent"],
+    ssh_results["failed_count"]
+)
+
+print(f"Risk Score: {score}/10")
+
+if alerts:
+    print("Alerts:")
+    for alert in alerts:
+        print(f"- {alert}")
+else:
+    print("No critical issues detected.")
 
 
 if __name__ == "__main__":
