@@ -30,18 +30,18 @@ print("\n=== DISK INFO ===")
 disk_info = get_disk_info()
 print(disk_info)
 
-    print("\n=== TOP PROCESSES ===")
-    for proc in get_top_processes():
-        print(proc)
+print("\n=== TOP PROCESSES ===")
+for proc in get_top_processes():
+    print(proc)
 
-    print("\n=== LISTENING PORTS ===")
-    for port in get_listening_ports():
-        print(port)
+print("\n=== LISTENING PORTS ===")
+for port in get_listening_ports():
+    print(port)
 
-    print("\n=== SERVICE STATUS ===")
-    services = ["ssh", "cron", "nginx"]
-    for service in services:
-        print(f"{service}: {get_service_status(service)}")
+print("\n=== SERVICE STATUS ===")
+services = ["ssh", "cron", "nginx"]
+for service in services:
+    print(f"{service}: {get_service_status(service)}")
 
     print("\n=== SSH LOG ANALYSIS ===")
 
